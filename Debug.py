@@ -3,21 +3,22 @@
 """
 
 import sys
-from PySide2 import QtCore, QtGui, QtWidgets
-from ui import Ui_Dialog
+from PySide2 import QtWidgets
+from ui import UiDialog
 
 counter = 0
 fit_counter = 0
 temp_counter = 0
 
+
 def main():
     # Create application
     app = QtWidgets.QApplication(sys.argv)
     # Create Form and UI
-    Dialog = QtWidgets.QDialog()
-    ui = Ui_Dialog()
-    ui.setupUi(Dialog)
-    Dialog.show()
+    dialog = QtWidgets.QDialog()
+    ui = UiDialog()
+    ui.setupUi(dialog)
+    dialog.show()
 
     # Hook Logic
     def plus_one():
@@ -58,11 +59,9 @@ def main():
     ui.set_counter.clicked.connect(edit_counter)
     ui.reset_counter.clicked.connect(cancel)
 
-
     # Run main loop
     sys.exit(app.exec_())
 
+
 if __name__ == "__main__":
     main()
-
-
