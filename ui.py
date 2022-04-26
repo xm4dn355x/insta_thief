@@ -10,7 +10,8 @@
 
 from PySide2 import QtCore, QtGui, QtWidgets
 
-class Ui_Dialog(object):
+
+class UiDialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.resize(500, 371)
@@ -67,7 +68,7 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     Dialog = QtWidgets.QDialog()
-    ui = Ui_Dialog()
+    ui = UiDialog()
     ui.setupUi(Dialog)
     Dialog.show()
     sys.exit(app.exec_())
